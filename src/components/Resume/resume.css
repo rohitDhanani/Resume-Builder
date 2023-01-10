@@ -1,0 +1,268 @@
+       /* layout */
+       :root{
+        --color:red;
+        --font:serif
+       }
+       .main-content {
+        border: 2px solid black;
+        margin: 20px auto;
+        min-height: 1000px;
+        width: 80%;
+        display: grid;
+        grid-template-columns: 300px 700px;
+        font-family:  var(--font);
+    }
+
+    section {
+        display: block;
+    }
+
+    .left-section {
+        /* background-color: black; */
+        background-color: var(--color);
+        height: 100%;
+        grid-column: span 1;
+
+    }
+    /* 'right-section' and it's grid column should span from the end of the 1st column till 2nd column (from 300px to 1000px). It must have a width of 90 percent. */
+
+    .right-section {
+        background-color: white;
+        height: 100%;
+        grid-column: span 2/4;
+        padding: 2rem 1rem;
+        width: 80%;
+    }
+
+    /* profile */
+    .left-section {
+        color: white;
+    }
+
+    .left-content {
+        padding: 1rem;
+    }
+
+    .profile-details {
+        /* text-align: center; */
+        padding: 16px;
+    }
+
+    .profile-image {
+        display: block;
+        width: 60%;
+        margin: auto;
+        border: 5px solid white;
+        border-radius: 30%;
+
+    }
+/* /////////////////////changes are: line 71 and 72 are added */
+    .name {
+        margin: 1rem;
+        font-size: 1.2rem;
+        font-weight: 700;
+        letter-spacing: 0.02px;
+        text-align: center;
+        padding: 0.8rem;
+        text-transform: uppercase;
+    }
+    /* ///////////////////////////////////////////////// */
+
+    .designation {
+        margin: 1rem;
+        font-size: 1rem;
+        padding-bottom: 0.5rem;
+        text-transform: uppercase;
+        text-align: center;
+
+    }
+
+    .description {
+        margin: 10px;
+        padding: 1rem;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    /* contact information */
+    li {
+        list-style: none;
+        display: inline-block;
+    }
+
+    .social-media .icon {
+        padding: 0.1rem;
+        margin: 1rem;
+        font-size: 0.8rem;
+        
+    }
+    .fa-brands{
+        /* color: #239ce2; */
+        /* font-size: small; */
+        color: white;
+    }
+    
+    .personal-details .icon {
+        padding: 0.1rem;
+        margin: 0.2rem;
+        
+        
+        /* background-color: #239ce2; */
+    }
+    .personal-details .fa-solid{
+        /* color: #239ce2; */
+        color: white;
+    }
+
+    /* skills */
+    .skill-tittle {
+        text-align: center;
+        padding: 1rem 0.5rem;
+        text-transform: uppercase;
+        font-size: 0.95rem;
+        margin-top: 2rem;
+    }
+
+    .progress-bar {
+        border: 1px solid white;
+        height: 4px;
+        background: white;
+        margin-bottom: 0.9rem;
+    }
+
+    .skill-name {
+        font-size: 1rem;
+        text-align: left;
+        text-transform: uppercase;
+        padding-bottom: 0.5rem;
+    }
+    /* /////////////// new class created //////////////////////*/
+    .skill{
+        text-align: center;
+        padding: 1rem 0.5rem;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        margin-top: 2rem;
+    }
+    /* ///////////////////////////////////////////////////////////////// */
+
+    /* right-section */
+    .cgpa,
+    .degree {
+        display: inline-block;
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    .cgpa {
+        margin-left: 3%;
+        /* text-align: center; */
+    }
+
+    .school,.work,
+    .percentage {
+        display: inline-block;
+        margin: 1rem;
+        padding: 1rem;
+    }
+    /* .percentage{
+        text-align: center;
+    } */
+    /* right section merged */
+   /* .right-section{ 
+    padding: 2rem 3rem;
+   } */
+   .right-main-content{
+    padding: 2rem;
+    color: var(--color);
+   }
+   .right-tittle{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    color: white;
+    /* background-color: black; */
+    background-color: var(--color);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    padding: 0.5rem;
+   }
+   .info,.items,.IOT .para{
+    margin: 1rem;
+        padding: 1rem;
+   }
+   .language,
+    .hobbies,.softskills {
+        display: inline-block;
+        margin: 1rem;
+        padding: 1rem;
+    }
+    a{
+        cursor: pointer;
+    }
+    /* .para{
+        font-size: 1.1rem;
+    } */
+    @media screen and (max-width:674px) {
+        body{
+            background-color: black;
+        }
+        .main-content{
+            /* display: flex;
+            flex-wrap: wrap; */
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            width: 90%;
+            margin: 0px;
+            min-height: 1000px;
+            
+
+        }
+    }
+
+    .IOT a{
+        /* text-decoration: none; */
+        /* color: black; */
+        color: var(--color);
+    }
+    .fa-regular{
+        font-size: 0.6rem;
+    }
+
+    .percentage{
+        position: relative;
+        left: 1rem;
+    }
+    .cgpa{
+        position: relative;
+        left: 1rem;
+    }
+    .IOT .fa-brands{
+        font-size: xx-small;
+        /* color: black; */
+        color: var(--color);
+
+    }
+
+    .fa-certificate{
+        font-size: xx-small;
+        /* color: black; */
+        color: var(--color);
+    }
+    .work{
+        margin: 0;
+    }
+    .colorPicker{
+        width: 80%;
+        padding: 1rem;
+        margin: 1rem auto;
+        display: flex;
+        box-shadow: 2px 2px 5px 2px gray;
+        align-items: center;
+        justify-content: space-around;
+        
+    
+    }
+   
