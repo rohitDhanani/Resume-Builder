@@ -157,7 +157,7 @@ const Resume =forwardRef( ({resumeInformation,selectedColor,setSelectedColor},do
                             <div className="10th">
                                 <div className="school">
     
-                                    <h3>10th from{resumeInformation?.educationInfo?.school10Board}</h3>
+                                    <h3>10th from{resumeInformation?.educationInfo?.school10Board} Board</h3>
                                     <p className="para">{resumeInformation?.educationInfo?.schoolName10},
                                         Date of completion : {resumeInformation?.educationInfo?.dateOfCompletionSchool10}</p>
                                 </div>

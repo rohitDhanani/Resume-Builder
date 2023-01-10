@@ -51,7 +51,7 @@ const EducationForm = ({resumeInformation,setResumeInformation}) => {
     <InputControl value={educationInfo.dateOfCompletionSchool12} onChange={handleOnChange} name="dateOfCompletionSchool12" type="date" label="Date Of Completion" placeholder="Enter Date Of Completion"/>
     </div>
     <div className={css.row}>
-    <InputControl value={educationInfo.school10Board} onChange={handleOnChange} name="school10Board" type="text" label="10TH School Board" placeholder="eg:- 10th from CBSE Board"/>
+    <InputControl value={educationInfo.school10Board} onChange={handleOnChange} name="school10Board" type="text" label="10TH School Board" placeholder="eg:- CBSE"/>
     <InputControl value={educationInfo.schoolName10} onChange={handleOnChange} name="schoolName10" type="text" label="School Name" placeholder="eg:- Saint Mary's school"/>
     </div>
     <div className={css.row}>
