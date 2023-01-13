@@ -71,7 +71,7 @@ const Resume =forwardRef( ({resumeInformation,selectedColor,setSelectedColor},do
     
                             </div>
                             <div className="skills">
-                                <h2 className="skill-tittle">{resumeInformation?.skillsInfo?.[0].sectionTitle}</h2>
+                                <h2 className="skill-tittle">{resumeInformation?.skillsInfo?.[0]?.sectionTitle}</h2>
                                 <div className="skills-content">
                                     {resumeInformation?.skillsInfo?.map((item,i)=>{
                                         return <Fragment key={i}>
@@ -97,14 +97,14 @@ const Resume =forwardRef( ({resumeInformation,selectedColor,setSelectedColor},do
         <div style={{width: "100%"}} >
             <section className="right-section">
                 <div className="right-main-content">
-                    <section className="about sec">
+                    {(resumeInformation?.aboutMeInfo?.[0]?.careerObjective)?<section className="about sec">
                         <h2 className="right-tittle">CAREER OBJECTIVE</h2>
                         <div className="info">
     
-                            <p className="para">{resumeInformation?.aboutMeInfo?.[0].careerObjective}</p>
+                            <p className="para">{resumeInformation?.aboutMeInfo?.[0]?.careerObjective}</p>
                             </div>
-                    </section>
-                    {(resumeInformation?.workExpInfo?.[0].companyName)?<section className="work-sec">
+                    </section>:<></>}
+                    {(resumeInformation?.workExpInfo?.[0]?.companyName)?<section className="work-sec">
                         <h2 className="right-tittle">{resumeInformation?.workExpInfo?.[0].sectionTitle}</h2>
                         <div className="work-content">
                            {resumeInformation?.workExpInfo?.map((item,i)=>{
@@ -116,7 +116,7 @@ const Resume =forwardRef( ({resumeInformation,selectedColor,setSelectedColor},do
                                         
                                         <p className="para">
                                             Experience from {item.startDate} to {item.endDate}</p>
-                                            {(item.certificate)?<a href={item.certificate}><i class="fa-solid fa-certificate">certificate</i></a>:<></>}
+                                            {(item.certificate)?<a href={item.certificate}><i className="fa-solid fa-certificate">certificate</i></a>:<></>}
 
                                             
                                             <br />
@@ -132,10 +132,10 @@ const Resume =forwardRef( ({resumeInformation,selectedColor,setSelectedColor},do
                     <section className="education sec">
                         <h2 className="right-tittle">{resumeInformation?.educationInfo?.sectionTitle}</h2>
                         <div className="education-content">
-                            <div className="univetsity">
+                            <div className="university">
                                 <div className="degree">
                                     <h3>{resumeInformation?.educationInfo?.degreeTitle}</h3>
-                                    <p className="para">{resumeInformation?.educationInfo?.collegeName},
+                                    <p className="para">{resumeInformation?.educationInfo?.collegeName},<br />
                                      Date of completion : {resumeInformation?.educationInfo?.dateOfCompletionCollege}</p>
                                 </div>
                                 <div className="cgpa">
@@ -143,10 +143,10 @@ const Resume =forwardRef( ({resumeInformation,selectedColor,setSelectedColor},do
                                     <p>{resumeInformation?.educationInfo?.cgpa}</p>
                                 </div>
                             </div>
-                            <div className="12th">
+                            <div className="twelth">
                                 <div className="school">
                                     <h3>12th from {resumeInformation?.educationInfo?.school12Board} Board</h3>
-                                    <p className="para">{resumeInformation?.educationInfo?.schoolName12},
+                                    <p className="para">{resumeInformation?.educationInfo?.schoolName12},<br />
                                         Date of completion : {resumeInformation?.educationInfo?.dateOfCompletionSchool12}</p>
                                 </div>
                                 <div className="percentage">
@@ -154,11 +154,11 @@ const Resume =forwardRef( ({resumeInformation,selectedColor,setSelectedColor},do
                                     <p>{resumeInformation?.educationInfo?.percentage12}%</p>
                                 </div>
                             </div>
-                            <div className="10th">
+                            <div className="tenth">
                                 <div className="school">
     
                                     <h3>10th from{resumeInformation?.educationInfo?.school10Board} Board</h3>
-                                    <p className="para">{resumeInformation?.educationInfo?.schoolName10},
+                                    <p className="para">{resumeInformation?.educationInfo?.schoolName10},<br />
                                         Date of completion : {resumeInformation?.educationInfo?.dateOfCompletionSchool10}</p>
                                 </div>
                                 <div className="percentage">
@@ -188,7 +188,7 @@ const Resume =forwardRef( ({resumeInformation,selectedColor,setSelectedColor},do
                             })}
                         </div>
                     </section>
-                    <section className="about">
+                    {(resumeInformation?.aboutMeInfo?.[0]?.language)?<section className="about">
                         <h2 className="right-tittle">{resumeInformation?.aboutMeInfo?.[0].sectionTitle}</h2>
                         <div className="aboutme">
                             <div className="language">
@@ -216,7 +216,7 @@ const Resume =forwardRef( ({resumeInformation,selectedColor,setSelectedColor},do
                                 
                             </div>
                         </div>
-                    </section>
+                    </section>:<></>}
                    
                     
     

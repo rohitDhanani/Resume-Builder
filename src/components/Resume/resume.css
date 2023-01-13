@@ -1,4 +1,4 @@
-       /* layout */
+       
        :root{
         --color:red;
         --font:serif
@@ -24,7 +24,7 @@
         grid-column: span 1;
 
     }
-    /* 'right-section' and it's grid column should span from the end of the 1st column till 2nd column (from 300px to 1000px). It must have a width of 90 percent. */
+   
 
     .right-section {
         background-color: white;
@@ -98,8 +98,7 @@
         
     }
     .fa-brands{
-        /* color: #239ce2; */
-        /* font-size: small; */
+       
         color: white;
     }
     
@@ -108,10 +107,10 @@
         margin: 0.2rem;
         
         
-        /* background-color: #239ce2; */
+        
     }
     .personal-details .fa-solid{
-        /* color: #239ce2; */
+        
         color: white;
     }
 
@@ -157,7 +156,7 @@
 
     .cgpa {
         margin-left: 3%;
-        /* text-align: center; */
+        text-align: center;
     }
 
     .school,.work,
@@ -234,21 +233,22 @@
     .percentage{
         position: relative;
         left: 1rem;
+        text-align: center;
     }
     .cgpa{
         position: relative;
-        left: 1rem;
+        left: 2rem;
     }
     .IOT .fa-brands{
         font-size: xx-small;
-        /* color: black; */
+       
         color: var(--color);
 
     }
 
     .fa-certificate{
         font-size: xx-small;
-        /* color: black; */
+        
         color: var(--color);
     }
     .work{
@@ -265,4 +265,7 @@
         
     
     }
-   
+
+    .university,.tenth,.twelth{
+        display: flex;
+    }
